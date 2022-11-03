@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>我的</title>
+  <style type="text/css">
+	html{
+	     height:100%;
+	}
+	body{
+	   font-size: 2em;
+	   background:url("background2.jpg") no-repeat;
+	   background-size:100% 100%;
+	}
+	#jianjie{
+	        text-align:center;
+	        color:white;
+			float:right;
+			padding-right:20%;
+			padding-top:15%;
+			font-family:方正舒体;
+	}
+	img{
+	    padding-top:15%;
+	    height:300px;
+		width:200px;
+		padding-left:15%;
+
+	}
+  </style>
+ </head>
+ <body>
+
+ <div id="jianjie">
+  <p>姓名：赵一贤</p>
+  <p>学号：20203029</p>
+  <p>学院：软件动漫学院</p>
+  <p>班级：20计算机3班</p>
+  </div>
+  <div id="img">
+  <img src="photo.jpg">
+  </div>
+ </body>
+</html>

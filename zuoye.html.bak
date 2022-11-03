@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>作业</title>
+  <style type="text/css">
+  body{
+       font-size:2.5em;
+       background:url("background2.jpg") no-repeat;
+	   background-size:cover;
+  }
+  div{
+      
+      padding:2em;
+	  text-align:center;
+	  color:lightpink;
+	  font-family:华文琥珀;
+  }
+  </style>
+ </head>
+
+ <body>
+ <div>
+ <p>第一次作业</p>
+ <p>第二次作业</p>
+ <p>第三次作业</p>
+ </div> 
+ </body>
+</html>
