@@ -10,7 +10,6 @@
 	   background-size:cover;
   }
   div{
-      
       padding:2em;
 	  text-align:center;
 	  color:lightpink;
@@ -21,8 +20,12 @@
 
  <body>
  <div>
+ <a href="jiajianfa.html">
  <p>第一次作业</p>
+ </a>
+ <a href="suiji.html">
  <p>第二次作业</p>
+ </a>
  <p>第三次作业</p>
  </div> 
  </body>

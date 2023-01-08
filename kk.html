@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+ 
+	div{
+		background-color:rgba(100,100,100,0.1);
+		border:1px solid pink;
+		border-radius:50%;
+		display:inline-block;
+		margin:10px;
+		color:green;
+		text-align:center;
+		padding:20px;
+		position:absolute;
+		transition:all 1.5s;
+	}
+
+  </style>
+ </head>
+ <body>
+  <script type="text/javascript">
+  <!--
+  var s = "床前明月光，疑是地上霜。举头望明月，低头思故乡。";
+  for(var i = 0; i < s.length; i++){
+	var divDom = document.createElement('div');
+	divDom.textContent = s[i];
+	divRandom(divDom);
+	divDom.onmousemove = function(){
+		this.style.position = "absolute";
+		divRandom(this);
+		
+	}
+	document.body.appendChild(divDom);
+  }
+
+  //函数
+  function divRandom(dom){
+	  var bodyWidth = window.innerWidth;
+      var bodyHeight = window.innerHeight;
+	  var a = Math.floor( Math.random() * (bodyWidth * 0.9));
+	  var b = Math.floor( Math.random() * (bodyHeight * 0.7));
+	  dom.style.left = a + 'px';
+	  dom.style.top = b + 'px';
+  }
+
+  //-->
+  </script>
+ </body>
+</html>

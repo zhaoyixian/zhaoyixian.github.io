@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+ body{
+      margin:0;/*让每个body和div的边界更加清楚*/
+      overflow:hidden;/* 隐藏一些渲染超出页面的范围的瑕疵*/
+  }
+	div{
+		background-color:lightblue;
+		border:1px solid pink;
+		border-radius:50%;
+		display:inline-block;
+		margin:auto;
+		color:pink;
+		text-align:center;
+		padding:10%;
+		position:absolute;
+		transition:all 1.5s;
+	}
+
+  </style>
+ </head>
+ <body>
+  <script type="text/javascript">
+  <!--
+  var s = "绝代有佳人，幽居在空谷，自云良家子，零落依草木。";
+  for(var i = 0; i < s.length; i++){
+	var divDom = document.createElement('div');
+	divDom.textContent = s[i];
+	randomText(divDom);
+	divDom.onmouseover = function(){
+	    this.style.position = "absolute";
+		//在dom元素的事件处理中，this关键字代表dom元素自身
+		randomText(this);
+	}
+	
+	document.body.appendChild(divDom);
+  }
+  //函数
+  function randomText(dom){
+	  var bodyWidth = window.innerWidth;
+      var bodyHeight = window.innerHeight;
+	  var a = Math.floor( Math.random() * (bodyWidth * 0.9));
+	  var b = Math.floor( Math.random() * (bodyHeight * 0.7));
+	  dom.style.right = a + 'px';
+	  dom.style.top = b + 'px';
+  }
+  //-->
+  </script>
+ </body>
+</html>
+
+

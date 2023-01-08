@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>小学加减法</title>
+ <style type="text/css">
+	#answer{
+	font-size:1.3em;
+	}
+	#next{
+	font-size:2em;
+	}
+	#question{
+	}
+ </style>
+ </head>
+ <body>
+  <h1>小学加减法</h1>
+    <div id="question">
+	<input id = "text1">
+	<span> + </span>
+	<input id = "text2">
+	<span> = </span>
+  </div>
+  
+  <div id="answer">
+	    A. <input type = "button" id = "answerA" value = "">
+		B. <input type = "button" id = "answerB" value = "">
+		C. <input type = "button" id = "answerC" value = "">
+		D. <input type = "button" id = "answerD" value = "">
+  </div>
+<div id= >
+  <h2>点击按钮开始答题</h2>
+	
+  </div>
+  <div id="next"  onclick = "tryNext()">
+		<input type = "button" id = "nextBtn" value = "开始">
+  </div>
+  <script type="text/javascript">
+  <!--
+     //
+	 var answerDoms = document.querySelectorAll("div#answer input ");
+	 var text1Dom = document.querySelector("input#text1");
+	 var text2Dom = document.querySelector("input#text2");
+	 var nextDom = document.querySelector("input#nextBtn");
+	 var encourageDom = document.querySelector("h1") ;
+
+     function tryNext(){
+			nextDom.value = "下一题";
+			encourageDom.textContent = "请选择正确答案";
+     //生成两个随机数放入数组中
+	 var text1 = parseInt (10 * Math.random ());
+	 var text2 = parseInt (10 * Math.random ());
+	 text1Dom.value = text1;
+	 text2Dom.value = text2;
+	 //将随机答案赋值给answer
+	 var randomArr = (getIntegerArr(4)); 				
+		for (var i=0 ; i<4 ; i++ ){
+			answerDoms[i].value = randomArr[i];
+		}
+	 
+
+     function getIntegerArr(n){
+		 function getRandom(){
+	 		var integer = Math.floor(Math.random() * 20 ) ;
+			//避免与正确答案重复导致的选项重复
+			while (integer == text1 + text2)
+			{
+				integer = getRandom();
+			}
+				return integer;	//返回产生的随机数					
+			};
+		  var integerArr = [getRandom()] ;	//往数组传入第一个数
+				for(var i=1; i < n ; i++){
+					var integer = getRandom() ;	
+					//若此随机数在数组中已存在，则继续获取
+					while ( integerArr.indexOf(integer) !== -1 ) { 
+					integer = getRandom() ;   
+					}		
+				integerArr[i] = integer ; //得到的不重复的值传入数组
+				}
+				return integerArr ;	//返回数组		
+
+	 }
+	 for (var i=0 ; i<4 ; i++ ){
+		/*设置每个答案的点击结果，*/		
+		answerDoms[i].onclick = function(){
+		var right = text1 + text2;
+		var sel = parseInt(this.value);
+		if (sel == right)
+		{
+			encourageDom.textContent = "回答正确！";
+					
+		} else{
+			encourageDom.textContent = "答错咯，加油！再试一次！";
+		   }
+		};
+	 }
+		 /*使正确答案在ABCD中随机显示*/
+		var ram = parseInt (4 * Math.random ());
+		if (ram == 0){
+			answerDoms[0].value = text1 + text2;
+		}else if(ram == 1){
+			answerDoms[1].value = text1 + text2;	
+		}else if(ram == 2){
+			answerDoms[2].value = text1 + text2;
+		}else if(ram == 3){
+			answerDoms[3].value = text1 + text2;
+		}	
+						
+
+	};
+
+		
+  //-->
+  </script>
+
+ </body>
+</html>
